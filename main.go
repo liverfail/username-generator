@@ -18,7 +18,7 @@ func main() {
 
 	pattern := flag.String("pattern", "noun|verb|number", "Pattern for generating username")
 	numberlength := flag.Int("numbermax", 100, "Maximum number")
-	cleansymbols := flag.Bool("clean", true, "Remove symbols")
+	cleansymbols := flag.Bool("cleansymbols", true, "Remove symbols")
 	capitalize := flag.Bool("capitalize", true, "Capitalize each word in user")
 
 	flag.Parse()
