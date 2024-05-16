@@ -22,7 +22,7 @@ jobs:
         go-version: '1.21.9'
 
     - name: Build
-      run: mkdir artifact && cp -r wordnet-dist artifact && go build -o artifact/username-generator -v ./... && GOOS=windows GOARCH=amd64 go build -o artifact/username-generator.exe -v ./...
+      run: mkdir artifact && cp -r wordnet-dict artifact && go build -o artifact/username-generator -v ./... && GOOS=windows GOARCH=amd64 go build -o artifact/username-generator.exe -v ./...
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
