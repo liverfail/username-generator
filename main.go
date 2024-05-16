@@ -17,7 +17,7 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 
 	pattern := flag.String("pattern", "noun|verb|number", "Pattern for generating username")
-	numberlength := flag.Int("numberlength", 100, "length for numbers")
+	numberlength := flag.Int("numbermax", 100, "Maximum number")
 	cleansymbols := flag.Bool("clean", true, "Remove symbols")
 	capitalize := flag.Bool("capitalize", true, "Capitalize each word in user")
 
