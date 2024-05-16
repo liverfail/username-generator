@@ -1,8 +1,8 @@
 
-# Username Generator
+# username-generator
 
 ## Overview
-Username Generator is a tool for anonymous users to generate random usernames for various websites, with the purpose of operational security (OPSEC) by avoiding the reuse of usernames across different platforms. You can customize how the usernameis generated to your liking.
+username-generator is a tool for anonymous users to generate random usernames for various websites, with the purpose of operational security (OPSEC) by avoiding the reuse of usernames across different platforms. You can customize how the usernameis generated to your liking.
 
 ## Installation
 Clone the repository and build the project using the following commands:
