@@ -10,7 +10,7 @@ Clone the repository and build the project using the following commands:
 ```
 git clone https://github.com/liverfail/username-generator.git
 cd username-generator
-go build
+go build -o username-generator
 ```
 
 ## Usage
