@@ -32,6 +32,14 @@ Example usage:
 - `cleansymbols`: Removes symbols from the generated username if set to true.
 - `capitalize`: Capitalizes each word in the generated username if set to true.
 
+## Pattern partTypes
+The current available options for -pattern are:
+- **``anyword``**
+- **``noun``**
+- **``verb``**
+- **``adjective``**
+- **``adverb``**
+
 ## Contributing
 If you have any suggestions, bug reports, or want to contribute to the project, feel free to open an issue or create a pull request.
 

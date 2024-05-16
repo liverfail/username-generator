@@ -52,6 +52,8 @@ func generateUsername(pattern string, numberlength int, cleansymbols bool, capit
 			part = getRandomWord(wn, "r")
 		case "number":
 			part = fmt.Sprintf("%d", rand.Intn(numberlength))
+		case "anyword":
+			part = getRandomWord(wn, "")
 		default:
 			fmt.Println("Unknown pattern partType:", partType)
 		}
