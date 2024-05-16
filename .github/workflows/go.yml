@@ -23,6 +23,32 @@ jobs:
 
     - name: Build
       run: mkdir artifact && cp -r wordnet-dict artifact && go build -o artifact/username-generator -v ./... && GOOS=windows GOARCH=amd64 go build -o artifact/username-generator.exe -v ./...
+    
+    - name: Calculate hashes for Debian build
+      run: |
+        # Calculate the hashes for Linux build
+        SHA512_LINUX=$(sha512sum username-generator | cut -d' ' -f1)
+        SHA256_LINUX=$(sha256sum username-generator | cut -d' ' -f1)
+        MD5_LINUX=$(md5sum username-generator | cut -d' ' -f1)
+        
+        # Print the hashes for Linux build
+        echo "Debian build:"
+        echo "  SHA512: $SHA512_LINUX"
+        echo "  SHA256: $SHA256_LINUX"
+        echo "  MD5: $MD5_LINUX"
+      
+    - name: Calculate hashes for Windows build
+      run: |
+        # Calculate the hashes for Windows build
+        SHA512_WINDOWS=$(sha512sum username-generator.exe | cut -d' ' -f1)
+        SHA256_WINDOWS=$(sha256sum username-generator.exe | cut -d' ' -f1)
+        MD5_WINDOWS=$(md5sum username-generator.exe | cut -d' ' -f1)
+        
+        # Print the hashes for Windows build
+        echo "Windows build:"
+        echo "  SHA512: $SHA512_WINDOWS"
+        echo "  SHA256: $SHA256_WINDOWS"
+        echo "  MD5: $MD5_WINDOWS"
       
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
